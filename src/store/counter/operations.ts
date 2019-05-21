@@ -1,12 +1,10 @@
-import { Action } from 'redux'
-import { ThunkAction } from 'redux-thunk'
-import actions from '~/store/counter/actions'
-import { RootState } from '~/store/index'
+import { RootThunkAction } from "~/store";
+import * as Actions from "~/store/counter/actions";
 
-export const increment = (): ThunkAction<void, RootState, void, Action> => (dispatch, _) => {
-  dispatch(actions.increment())
-}
+export const increment = (): RootThunkAction<void> => (dispatch, _) => {
+  dispatch(Actions.increment());
+};
 
-export const decrement = (): ThunkAction<void, RootState, void, Action> => (dispatch, _) => {
-  dispatch(actions.decrement())
-}
+export const decrement = (): RootThunkAction<void> => (dispatch, _) => {
+  dispatch(Actions.decrement());
+};

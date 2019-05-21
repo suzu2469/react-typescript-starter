@@ -5,11 +5,22 @@ type Props = {
   onIncrementClick: () => void
   onDecrementClick: () => void
 }
-const Top: React.FC<Props> = ({ count, onDecrementClick, onIncrementClick, children }) => (
+const Top: React.FC<Props> = ({
+  count,
+  onDecrementClick,
+  onIncrementClick
+}) => (
   <div>
-    <div>Connt: {count}</div>
-    <button onClick={onIncrementClick}>Increment</button>
-    <button onClick={onDecrementClick}>Decrement</button>
+    <div>
+      Connt:
+      {count}
+    </div>
+    <button onClick={onIncrementClick} type="button">
+      Increment
+    </button>
+    <button onClick={onDecrementClick} type="button">
+      Decrement
+    </button>
   </div>
 )
 

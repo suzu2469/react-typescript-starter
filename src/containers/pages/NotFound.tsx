@@ -1,13 +1,10 @@
 import { connect } from 'react-redux'
-import { Action } from 'redux'
-import { ThunkDispatch } from 'redux-thunk'
-import { RootState } from '~/store'
 
 import NotFoundTemplate from '~/components/templates/NotFoundTemplate'
 
-const mapStateToProps = (_: RootState) => ({})
+const mapStateToProps = () => ({})
 
-const mapDispatchToProps = (_: ThunkDispatch<RootState, void, Action>) => ({})
+const mapDispatchToProps = () => ({})
 
 const NotFound = connect(
   mapStateToProps,

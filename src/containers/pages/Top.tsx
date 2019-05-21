@@ -10,7 +10,9 @@ const mapStateToProps = (state: RootState) => ({
   count: state.counter.count
 })
 
-const mapDispatchToProps = (dispatch: ThunkDispatch<RootState, void, Action>) => ({
+const mapDispatchToProps = (
+  dispatch: ThunkDispatch<RootState, void, Action>
+) => ({
   onDecrementClick: () => {
     dispatch(decrement())
   },

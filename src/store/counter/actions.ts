@@ -1,10 +1,13 @@
-import { actionCreatorFactory } from 'typescript-fsa'
+import * as Actions from "~/store/counter/types";
 
-const actionCreator = actionCreatorFactory('app/counter/')
+export const increment = () => ({
+  type: Actions.Increment
+});
 
-const actions = {
-  decrement: actionCreator<void>('decrement'),
-  increment: actionCreator<void>('increment')
-}
+export const decrement = () => ({
+  type: Actions.Decrement
+});
 
-export default actions
+export type Action =
+  | ReturnType<typeof increment>
+  | ReturnType<typeof decrement>;
