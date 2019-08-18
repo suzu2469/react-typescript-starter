@@ -3,11 +3,12 @@ import { Action } from 'redux'
 import { ThunkDispatch } from 'redux-thunk'
 import { RootState } from '~/store'
 import { decrement, increment } from '~/store/counter/operations'
+import { countSelector } from '~/store/counter/selectors'
 
 import TopTemplate from '~/components/templates/TopTemplate'
 
 const mapStateToProps = (state: RootState) => ({
-  count: state.counter.count
+  count: countSelector(state)
 })
 
 const mapDispatchToProps = (
