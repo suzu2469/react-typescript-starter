@@ -2,7 +2,7 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "build": "webpack -p",
-    "lint": "eslint ./src/**/*.{ts,tsx}",
+    "lint": "eslint --ext .tsx,.ts,.js src/",
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
