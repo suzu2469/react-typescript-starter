@@ -21,18 +21,12 @@ module.exports = {
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: /\.tsx?$/,
-        use: [
-          {
-            loader: 'tslint-loader',
-            options: {
-              typeCheck: true,
-              fix: false,
-              emitErrors: true
-            }
-          }
-        ]
+          test: /\.tsx?$/,
+          use: [
+              {
+                  loader: 'ts-loader'
+              }
+          ]
       },
       {
         test: /\.(j|t)sx?$/,
